@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-
-<!--
+<?php
+/*
 consearch
 
 Copyright (C) 2015 Felix Kästner, consearch @ f p u n k t k . de
@@ -10,15 +9,33 @@ This program is free software; you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program; if not, see http://www.gnu.org/licenses/.
--->
+*/
 
-<?php
 $dse = "";
 if ( isset($_GET['dse']) and preg_match('/^[0-9a-z]{1,5}$/', $_GET['dse']) === 1 ) { // TODO: prevent injection, check whether dse is a valid searchengine
     $dse = $_GET['dse'];
 }
-?>
 
+if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
+    echo '<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+<ShortName>consearch';
+    if ( $dse ) { echo " ($dse)"; }
+    echo '</ShortName>
+<Description>conveniently use different searchengines</Description>
+<Tags>consearch</Tags>
+<Contact>consearch @ f p u n k t k . de</Contact>
+<Url type="text/html" template="https://www.fpunktk.de/consearch/index.php';
+    if ( $dse ) { echo "?dse=$dse"; }
+    echo '#{searchTerms}" />
+<Image height="16" width="16" type="image/png">https://www.fpunktk.de/consearch/consearch.png</Image>
+</OpenSearchDescription>';
+    
+    exit;
+}
+
+?>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -26,7 +43,7 @@ if ( isset($_GET['dse']) and preg_match('/^[0-9a-z]{1,5}$/', $_GET['dse']) === 1
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>consearch</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
-<link rel="search" type="application/opensearchdescription+xml" href="opensearchdescription-consearch.xml.php<?php if ( $dse ) { echo "?dse=$dse"; } ?>" title="consearch<?php if ( $dse ) { echo " ($dse)"; } ?>">
+<link rel="search" type="application/opensearchdescription+xml" href="index.php?get=opensearchdescription<?php if ( $dse ) { echo "&amp;dse=$dse"; } ?>" title="consearch<?php if ( $dse ) { echo " ($dse)"; } ?>">
 
 <style type="text/css">
 * {
