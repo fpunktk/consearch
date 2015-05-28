@@ -19,7 +19,7 @@ You should have received a copy of the GNU General Public License along with thi
 
 <title>consearch</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
-<link rel="search" type="application/opensearchdescription+xml" href="opensearchdescription-consearch.xml" title="consearch">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearchdescription-consearch.xml.php" title="consearch">
 
 <style type="text/css">
 * {
