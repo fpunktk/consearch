@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
 <!--
 consearch
@@ -17,9 +12,21 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, see http://www.gnu.org/licenses/.
 -->
 
+<?php
+$dse = "";
+if ( isset($_GET['dse']) and preg_match('/^[0-9a-z]{1,5}$/', $_GET['dse']) === 1 ) { // TODO: prevent injection, check whether dse is a valid searchengine
+    $dse = $_GET['dse'];
+}
+?>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>consearch</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
-<link rel="search" type="application/opensearchdescription+xml" href="opensearchdescription-consearch.xml.php" title="consearch">
+<link rel="search" type="application/opensearchdescription+xml" href="opensearchdescription-consearch.xml.php<?php if ( $dse ) { echo "?dse=$dse"; } ?>" title="consearch<?php if ( $dse ) { echo " ($dse)"; } ?>">
 
 <style type="text/css">
 * {
@@ -83,9 +90,12 @@ b64images["ud.png"] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAIAAADAAbR1AAAABmJLR0T//
 b64images["sp.png"] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMAAABIAAAASABGyWs+AAACMVBMVEVDi/VDi/ZEi/VEi/ZEjfZFi/ZIjvZLkvdSmPdVnfdWnfdZnvdbofdfofdfpvhlqPdlqvhsr/htrvhxsvl1s/h5s/l6uPl+u/mAu/qFv/qIwfqNxvqUyvqVy/qZzvo/h/U/ifU/ifZBifVBi/ZCifZCi/ZEjfZEkPZGkPZHkPdHkfZJkfZJkfdKkPdKkfZKkfdMlPdOkfZPmPZPmfdQl/dQmfZRiOdUjOdVnfdZnPdZnvhalOhanvhcofhflOhgn/dgpPhgpvhhn/dipPhjnOhmqfhmqflnq/lonOhpq/hrn+hrq/hrrPhsr/htp/htrvltr/luoelvnehvr/hvr/lwr/hysPlzr/h1qOl1tfl1t/l3sfl3t/h3t/l4rvl7rOl7tPl7ufl8t/l8ufl9tPl+sfl/ufl/ufqBaJuBn9qBt/mDd6uDvfmElMqFvfmFvfqFvvmFvvqHwvmHwvqIfKuIuPqIuvqKiruLxPmLxPqLx/mLx/qNx/mNx/qORmyOYoyQSGyQV3yQu+mQu+qQx/qRSGyRx/qRyfqRyfuTZoyTwPqUyfqUyfuVyfqVzPuYTWyYlruZXXyZwPqaepuawPqbYH2bwvqdxPuhU22hY32iKj2jKz2kLD6kO02lLD6ly/umLT6mLj6nLj6nPE2sJC6t0PuxGR+x0fuyGh+zGh+z0/y0Gx+3Dw+41fzF3fzL4v3M4P3a6f3b6f3e6/3e7P3m8P7o8v7z+P70+f71+f////8csBEiAAAAH3RSTlP+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+avpWVgAAAAFiS0dEuqOxR9oAAAELSURBVBgZBcE9L0NhFAfw/3me4zbVl7S0SNqFVIuQXIOIxECsPoEPgJjs3fgEFhOLySwGEYmwkBjEIiIGCQODhr4899729hy/H5V3CEoghgJWD1ibRkDGqJdtUZRQ1jZDyND4GOHnxQlLhwhQHgmbheHao7BECjL5Cq4kvVLIiREXuG7glzQKGw8YEiMdF+Yy544X2+0ATmxiNLk5P3v/VC3ODPrh5QdLvM2/78nps/Xs5O1bLHagnj+5WV2emDuspXrP+mV5wyutpfriNS6mypnXbyN3KNrW3jV64VFD+kJ+tLB0atNb/bpqKlKmKoDdCoL9JhEAwxEBsfs8/lMYEIi8LkAGChILgvkHgGxyIshZcSEAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTUtMDUtMjJUMTg6MjE6NTgrMDI6MDD9Qvh9AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE0LTAzLTE3VDIwOjU5OjU2KzAxOjAwcSze8gAAAABJRU5ErkJggg==";
 b64images["down.png"] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAEgAAABIAEbJaz4AAACUSURBVBjTY2AAgdR/QKDLgABgAR0kgXh0gThkAWlhhICwAAND69c3HgxRIAFVhpT3b2IYfv/790o5HCxg9w3IZvgFZJ5OAQm4PAESLxjq/gKpxyCBR0D8O5aBZdk/BPjbArSF/zhCYCUryF75RzD+KT6IS8w+Q/iPZWAOjQZZ9e+jBcLpzUCrfkYh+YV1/r9fZRAmAMypgqgtOlghAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE1LTA1LTE4VDE0OjM3OjI2KzAyOjAwVrt97QAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNS0wNS0xOFQxNDozNTo1NSswMjowMBg+BugAAAAASUVORK5CYII=";
 b64images["leo.png"] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMAAABIAAAASABGyWs+AAABp1BMVEX///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKCgAZFAAAAAAQDAAAAAAPDAAAAAAAAAAlHwMAAAAAAAADAwAAAAAuJQM2MQMAAABRRgU5MQUfGgInIAIYFAJGOwRTRwZFOwYXEwI+NQZuXgmkjAyiigxmVwitlA0DAwBGOwWskQyskQ64nA0rJQOaggxGPAaskg2ehgvevBGzlw3CpQ+ehwtbTQe3nA7CpA7RsRGDbgq6nw6wlw7Fpw/auhCLdwubhAyahAzZuRDkwxFwXwiokA3Aow/cvBHgvxHFpw/gvxHauRHjwRHhvxF3ZgknIQPEpw/NsA9sXAjXuBHbuhDtyhJlVgjiwBLiwyTnxBLqxxLmxBHvyhLvzBLiwBHHs0jfwivtyBLpxhLzzxLuyxLMsinxzRLnyCbyzxTTuCvwzRPwzBPxzRLvyxLxzhLxzhLvzRzxzRKeklXpxxr10BP20ROrp5T20RMUEAH10RXzzhL30hT10BP10RP20hP40xP40xP30hP40xP40xP40xP40xP40xP40xP40xPKysr40xOP+DMuAAAAi3RSTlMACAkQERMXGBweLDEzOEBBQkRIS1JTU1dZWV5fYmpuc3WBgoeHkpKXnqKkpKWlrK2ur6+zs7W1tre3t7i5uby8vL29vr6+v7+/v7/AwMLCxMXGx8fIyMnJysvLzMzO0NDR0tLS09PU1tbY2dra293e3t/g4OHh5ejp6erq7O3v7+/x8vT2+Pn6+/z9D21gkgAAAAFiS0dEAIgFHUgAAADOSURBVBjTY2BgYGDhZ0AFqq7iXLIK3AzCPFABxWRtn4QeXzUzHaiAUllXVmJ1UlSGBITP69XZU9qdXlESywwRkHfv6enIrs0s8uCECHCFNPaEFfYARTVEmUACWjFtLrnBleHlad5yIL5QSm6rrZFPZ0RVnnMgB1BA1NHJICfe3s/fLdVBAKRCzCa/Jci8oMaz3E4KbCafcXN7XEeoqZWuIcQSacuGps68np66ehNBsAA7q2aAdXtkcXSHvjLU6RwiFnoqMpLqHAj/sjHCmQCutDB5t6/XDgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxNS0wNS0xOFQxNDo1OTowMSswMjowMCdFvu4AAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTUtMDUtMThUMTQ6NTg6MjkrMDI6MDDIECR2AAAAAElFTkSuQmCC";
+
+<?php
 // for f in *.ico; do for q in {0..100}; do convert -quality $q $f ${f%*.ico}$q.png; done; echo "b64images[\"${f%*.ico}.png\"] = \"$(base64 $(\ls -1S ${f%*.ico}*.png | tail -n 1) | tr -d '\n')\";"; done
 // try optipng
 // for f in *.png; do echo "b64images[\"${f}\"] = \"$(base64 $f | tr -d '\n')\";"; done > tmp.js
+?>
 
 var se = new Object(); // object of search engines
 // se["keyword"] = ["displayed name, max 7 chars", "url to which the querystring can be append", "b64images name"];
@@ -135,12 +145,18 @@ function parse_fragmentstring() {
             location.href = se[kw][1] + fragmentarr.join(" ");
         } else {
             // there is no keyword
-            // display all buttons and write the fragmentstring into the querystring input
-            document.getElementById("querystring").value = fragmentarr.join(" ");
+<?php
+if ( $dse ) {
+    // use a default searchengine
+    echo '            location.href = se["' . $dse . '"][1] + fragmentarr.join(" ");
+';
+} else {
+    // display all buttons and write the fragmentstring into the querystring input
+    echo '            document.getElementById("querystring").value = fragmentarr.join(" ");
             display_searchbuttons();
-            // or
-            // use a default searchengine
-            //location.href = se["sp"][1] + fragmentarr.join(" ");
+';
+}
+?>
         }
     }
 }
