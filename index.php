@@ -119,13 +119,13 @@ function display_searchbuttons() {
     for ( kw in se ) {
         document.getElementById("searchbuttons").innerHTML += '<button type="button" value="' + se[kw][0] + '" onclick=\'location.href="' + se[kw][1] + '" + document.getElementById("querystring").value\'><img src="data:image/png;base64,' + b64images[se[kw][2]] + '" alt="">&nbsp;' + se[kw][0] + "</button> \n";
     }
-    document.getElementById("querystring").focus();
 }
 
 function parse_fragmentstring() {
     var fragmentstring = document.URL.substr( document.URL.split("#")[0].length + 1 );
     if ( fragmentstring == "" ) {
         display_searchbuttons();
+        document.getElementById("querystring").focus();
     } else {
         fragmentarr = fragmentstring.replace("%20", "+").split("+");
         if ( se[fragmentarr[0]] ) {
