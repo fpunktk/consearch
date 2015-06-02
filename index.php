@@ -72,7 +72,9 @@ input {
 }
 button {
     margin: 0px -5px 3mm 0px; /* trbl */
-    padding: -4px;
+    padding: 3px;
+    background: none;
+    border: 1px solid black;
     width: 13ex; /* 13ex 11ch */
     width: 11ch; /* used twice because some browsers don't understand it */
     height: 13mm;
