@@ -140,8 +140,10 @@ se["yt"] = ["youtube", "https://www.youtube.com/results?search_query=", "yt.png"
 se["imdb"] = ["imdb", "http://www.imdb.com/find?s=all&q=", "imdb.png"];
 se["az"] = ["amazon", "https://www.amazon.de/s/?url=search-alias%3Daps&field-keywords=", "az.png"];
 se["php"] = ["php.net", "http://de2.php.net/manual-lookup.php?lang=de&pattern=", "php.png"];
-se["sh"] = ["slfhtml", "http://de.selfhtml.org/navigation/suche/index.htm?Suchanfrage=", "sh.png"];
+se["sh"] = ["slfhtml", "https://wiki.selfhtml.org/index.php?search=", "sh.png"];
 se["down"] = ["down", "http://www.downforeveryoneorjustme.com/", "down.png"];
+se["fefe"] = ["fefe", "https://blog.fefe.de/?q=", ""];
+se["wtr"] = ["wtr.com", "http://www.wetter.com/suche/?o=location&q=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
