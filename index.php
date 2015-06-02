@@ -159,17 +159,22 @@ function parse_fragmentstring() {
         document.getElementById("querystring").focus();
     } else {
         fragmentarr = fragmentstring.replace("%20", "+").split("+");
-        if ( se[fragmentarr[0]] ) {
-            // first word in query is a keyword
-            kw = fragmentarr[0];
+        kw = fragmentarr[0];
+        if ( se[kw] ) {
+            // first word in query is a search engine keyword
             fragmentarr.shift();
             location.href = se[kw][1] + fragmentarr.join(" ");
         } else {
-            // there is no keyword
 <?php
 if ( $dse ) {
     // use a default searchengine
-    echo '            location.href = se["' . $dse . '"][1] + fragmentarr.join(" ");
+    echo '            if ( kw != "nd" ) {
+                location.href = se["' . $dse . '"][1] + fragmentarr.join(" ");
+            } else {
+                fragmentarr.shift();
+                document.getElementById("querystring").value = fragmentarr.join(" ");
+                display_searchbuttons();
+            }
 ';
 } else {
     // display all buttons and write the fragmentstring into the querystring input
