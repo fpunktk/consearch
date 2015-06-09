@@ -144,6 +144,10 @@ se["sh"] = ["slfhtml", "https://wiki.selfhtml.org/index.php?search=", "sh.png"];
 se["down"] = ["down", "http://www.downforeveryoneorjustme.com/", "down.png"];
 se["fefe"] = ["fefe", "https://blog.fefe.de/?q=", ""];
 se["wtr"] = ["wtr.com", "http://www.wetter.com/suche/?o=location&q=", ""];
+se["gh"] = ["github", "https://github.com/search?utf8=✓&q=", ""];
+se["bb"] = ["bing", "https://www.bing.com/search?q=", ""];
+se["mdn"] = ["mdn", "https://developer.mozilla.org/search?q=", ""];
+se["ctan"] = ["ctan", "http://ctan.org/search/?phrase=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
