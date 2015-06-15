@@ -143,11 +143,13 @@ se["php"] = ["php.net", "http://de2.php.net/manual-lookup.php?lang=de&pattern=",
 se["sh"] = ["slfhtml", "https://wiki.selfhtml.org/index.php?search=", "sh.png"];
 se["down"] = ["down", "http://www.downforeveryoneorjustme.com/", "down.png"];
 se["fefe"] = ["fefe", "https://blog.fefe.de/?q=", ""];
-se["wtr"] = ["wtr.com", "http://www.wetter.com/suche/?o=location&q=", ""];
+se["wtr"] = ["wtr-ol", "http://www.wetteronline.de/?searchpcid=pc_city_weather&searchpid=p_city_weather&pid=p_search&searchstring=", ""];
+se["wtrc"] = ["wtr.com", "http://www.wetter.com/suche/?o=location&q=", ""];
 se["gh"] = ["github", "https://github.com/search?utf8=✓&q=", ""];
 se["bb"] = ["bing", "https://www.bing.com/search?q=", ""];
 se["mdn"] = ["mdn", "https://developer.mozilla.org/search?q=", ""];
 se["ctan"] = ["ctan", "http://ctan.org/search/?phrase=", ""];
+se["gpg"] = ["gpg_key", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&search=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
