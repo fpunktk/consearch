@@ -115,7 +115,7 @@ b64images["leo.png"] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMA
 ?>
 
 var se = new Object(); // object of search engines
-// se["keyword"] = ["displayed name, max 7 chars", "url to which the querystring can be append", "b64images name"];
+// se["keyword"] = ["displayed name, max 7 chars", "url to which the querystring can be appended", "b64images name"];
 se["ii"] = ["ixquick", "https://eu.ixquick.com/do/search?q=", "ixquick.png"];
 se["id"] = ["ixq_de", "https://eu.ixquick.com/do/search?l=deutsch&q=", "ixquick.png"];
 se["wp"] = ["wp_de", "https://de.wikipedia.org/wiki/Spezial:Search?search=", "wp.png"];
