@@ -122,6 +122,7 @@ se["wp"] = ["wp_de", "https://de.wikipedia.org/wiki/Spezial:Search?search=", "wp
 se["wpe"] = ["wp_en", "https://en.wikipedia.org/wiki/Special:Search?search=", "wp.png"];
 se["sp"] = ["strtpge", "https://startpage.com/do/search?query=", "sp.png"];
 se["dd"] = ["dd_go", "https://duckduckgo.com/html/?ka=n&kh=1&kl=wt-wt&kp=-1&kt=n&kv=1&ky=-1&q=", "dd.png"];
+se["sx"] = ["searx", "https://searx.me/?q=", ""];
 se["gg"] = ["google", "https://www.google.com/search?hl=de&safe=off&q=", "gg.png"];
 se["si"] = ["sp_img", "https://startpage.com/do/search?cat=pics&query=", "sp.png"];
 se["gi"] = ["gg_img", "https://www.google.com/images?hl=de&safe=off&q=", "gg.png"];
@@ -148,6 +149,7 @@ se["bb"] = ["bing", "https://www.bing.com/search?q=", ""];
 se["mdn"] = ["mdn", "https://developer.mozilla.org/search?q=", ""];
 se["ctan"] = ["ctan", "http://ctan.org/search/?phrase=", ""];
 se["gpg"] = ["gpg_key", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&search=", ""];
+se["gsm"] = ["gsm", "http://www.gsmarena.com/results.php3?sQuickSearch=yes&sName=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
