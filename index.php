@@ -211,7 +211,7 @@ if ( $dse ) {
 
 <body onload="parse_fragmentstring();">
 
-<h1><a href="">fpunktk.de/consearch</a></h1>
+<h1><a href="./">fpunktk.de/consearch</a></h1>
 
 <noscript>
 <p style="color: red; font-size: 200%; font-weight: bold;">
