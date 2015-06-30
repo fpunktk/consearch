@@ -161,7 +161,7 @@ se["gh"] = ["github", "https://github.com/search?utf8=✓&q=", ""];
 se["bb"] = ["bing", "https://www.bing.com/search?q=", ""];
 se["mdn"] = ["mdn", "https://developer.mozilla.org/search?q=", ""];
 se["ctan"] = ["ctan", "http://ctan.org/search/?phrase=", ""];
-se["gpg"] = ["gpg_key", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&search=", ""];
+se["gpg"] = ["gpg_mit", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&search=", ""];
 se["gsm"] = ["gsm", "http://www.gsmarena.com/results.php3?sQuickSearch=yes&sName=", ""];
 
 function display_searchbuttons() {
