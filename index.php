@@ -43,7 +43,20 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <title>consearch</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
-<link rel="search" type="application/opensearchdescription+xml" href="index.php?get=opensearchdescription<?php if ( $dse ) { echo "&amp;dse=$dse"; } ?>" title="consearch<?php if ( $dse ) { echo " ($dse)"; } ?>">
+<?php
+if ( isset($_GET['include']) and $_GET['include'] == "opensearchdescriptionlink" ) {
+    echo '<link rel="search" type="application/opensearchdescription+xml" href="index.php?get=opensearchdescription';
+    if ( $dse ) {
+        echo "&amp;dse=$dse";
+    }
+    echo '" title="consearch';
+    if ( $dse ) {
+        echo " ($dse)";
+    }
+    echo '">';
+    echo "\n";
+}
+?>
 
 <style type="text/css">
 * {
@@ -212,6 +225,10 @@ please enable javascript
 
 <div id="searchbuttons">
 </div>
+
+<p>
+<a href="?include=opensearchdescriptionlink">add to browser</a>
+</p>
 
 <p>
 <a href="https://github.com/fpunktk/consearch">about</a>
