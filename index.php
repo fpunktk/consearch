@@ -167,7 +167,7 @@ se["gsm"] = ["gsm", "http://www.gsmarena.com/results.php3?sQuickSearch=yes&sName
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
     for ( kw in se ) {
-        document.getElementById("searchbuttons").innerHTML += '<button type="button" value="' + se[kw][0] + '" onclick=\'location.href="' + se[kw][1] + '" + document.getElementById("querystring").value\'><img src="data:image/png;base64,' + b64images[se[kw][2]] + '" alt="">&nbsp;' + se[kw][0] + "</button> \n";
+        document.getElementById("searchbuttons").innerHTML += '<button type="button" title="' + kw + '" value="' + se[kw][0] + '" onclick=\'location.href="' + se[kw][1] + '" + document.getElementById("querystring").value\'><img src="data:image/png;base64,' + b64images[se[kw][2]] + '" alt="">&nbsp;' + se[kw][0] + "</button> \n";
     }
 }
 
