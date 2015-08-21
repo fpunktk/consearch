@@ -147,7 +147,8 @@ se["osm"] = ["osm", "https://www.openstreetmap.org/?query=", "osm.png"];
 se["gm"] = ["g-maps", "https://www.google.de/maps/preview?hl=de&q=", "gm.png"];
 se["uu"] = ["uu_wiki", "http://wiki.ubuntuusers.de/", "uu.png"];
 se["man"] = ["u_man", "http://manpages.ubuntu.com/cgi-bin/search.py?ie=UTF-8&titles=Title&q=", "man-u.png"];
-se["ups"] = ["ups", "http://packages.ubuntu.com/search?searchon=names&suite=all&section=all&keywords=", "man-u.png"];
+se["dps"] = ["deb-pkg", "https://packages.debian.org/search?searchon=names&suite=all&section=all&keywords=", ""];
+se["ups"] = ["uu-pkg", "http://packages.ubuntu.com/search?searchon=names&suite=all&section=all&keywords=", "man-u.png"];
 se["yt"] = ["youtube", "https://www.youtube.com/results?search_query=", "yt.png"];
 se["imdb"] = ["imdb", "http://www.imdb.com/find?s=all&q=", "imdb.png"];
 se["az"] = ["amazon", "https://www.amazon.de/s/?url=search-alias%3Daps&field-keywords=", "az.png"];
@@ -161,8 +162,10 @@ se["gh"] = ["github", "https://github.com/search?utf8=✓&q=", ""];
 se["bb"] = ["bing", "https://www.bing.com/search?q=", ""];
 se["mdn"] = ["mdn", "https://developer.mozilla.org/search?q=", ""];
 se["ctan"] = ["ctan", "http://ctan.org/search/?phrase=", ""];
-se["gpg"] = ["gpg_mit", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&search=", ""];
+se["gpg"] = ["pgp.mit", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&search=", ""];
+se["amo"] = ["amo", "https://addons.mozilla.org/search/?q=", ""];
 se["gsm"] = ["gsm", "http://www.gsmarena.com/results.php3?sQuickSearch=yes&sName=", ""];
+se["ck"] = ["chfkch", "http://www.chefkoch.de/suche.php?wo=2&suche=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
