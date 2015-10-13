@@ -123,7 +123,7 @@ b64images["leo.png"] = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMA
 
 <?php
 // for f in *.ico; do for q in {0..100}; do convert -quality $q $f ${f%*.ico}$q.png; done; echo "b64images[\"${f%*.ico}.png\"] = \"$(base64 $(\ls -1S ${f%*.ico}*.png | tail -n 1) | tr -d '\n')\";"; done
-// try optipng
+// try optipng or pngcrush
 // for f in *.png; do echo "b64images[\"${f}\"] = \"$(base64 $f | tr -d '\n')\";"; done > tmp.js
 ?>
 
