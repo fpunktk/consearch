@@ -166,6 +166,7 @@ se["gpg"] = ["pgp.mit", "https://pgp.mit.edu/pks/lookup?op=index&fingerprint=on&
 se["amo"] = ["amo", "https://addons.mozilla.org/search/?q=", ""];
 se["gsm"] = ["gsm", "http://www.gsmarena.com/results.php3?sQuickSearch=yes&sName=", ""];
 se["ck"] = ["chfkch", "http://www.chefkoch.de/suche.php?wo=2&suche=", ""];
+se["ypi"] = ["ypi", "http://youpronounce.it/search.jsp?q=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
