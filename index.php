@@ -15,6 +15,10 @@ $dse = "";
 if ( isset($_GET['dse']) and preg_match('/^[0-9a-z]{1,5}$/', $_GET['dse']) === 1 ) { // TODO: prevent injection, check whether dse is a valid searchengine
     $dse = $_GET['dse'];
 }
+$browserintegration = "";
+if ( isset($_GET['include']) and $_GET['include'] == "browserintegration" ) {
+    $browserintegration = "true";
+}
 
 if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
     header('Content-Type: text/xml');
@@ -45,7 +49,7 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
 <title>consearch</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
 <?php
-if ( isset($_GET['include']) and $_GET['include'] == "opensearchdescriptionlink" ) {
+if ( $browserintegration ) {
     echo '<link rel="search" type="application/opensearchdescription+xml" href="index.php?get=opensearchdescription';
     if ( $dse ) {
         echo "&amp;dse=$dse";
@@ -179,6 +183,9 @@ function display_searchbuttons() {
 function parse_fragmentstring() {
     var fragmentstring = document.URL.substr( document.URL.split("#")[0].length + 1 );
     if ( fragmentstring == "" ) {
+        var fragmentstring = document.URL.substr( document.URL.split("consearchterm=")[0].length + 14 );
+    }
+    if ( fragmentstring == "" ) {
         display_searchbuttons();
         document.getElementById("querystring").focus();
     } else {
@@ -224,6 +231,13 @@ please enable javascript
 </p>
 </noscript>
 
+<?php
+if ( $browserintegration ) {
+    // hide input and searchbuttons
+    echo '<div style="display: none;">' . "\n";
+}
+?>
+
 <div>
 <label><input id="querystring" type="text"></label>
 </div>
@@ -232,8 +246,24 @@ please enable javascript
 </div>
 
 <p>
-<a href="?include=opensearchdescriptionlink">add to browser</a>
+<a href="?include=browserintegration">add to browser</a>
 </p>
+
+<?php
+if ( $browserintegration ) {
+    echo '</div>
+
+<p>
+Now add consearch to your browser. In firefox this is done via the searchbar. If this does not work then consearch can be added via the following form, but this would send all queries to the server :-(
+</p>
+
+<form method="GET" action="./">' . "\n";
+    if ( $dse ) { echo '<input type="hidden" name="dse" value="' . $dse . '">' . "\n"; }
+    echo '<input type="text" name="consearchterm" value="">
+</form>
+';
+}
+?>
 
 <p>
 <a href="https://github.com/fpunktk/consearch">about</a>
