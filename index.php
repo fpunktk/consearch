@@ -143,6 +143,7 @@ se["sp"] = ["strtpge", "https://startpage.com/do/search?query=", "sp.png"];
 se["dd"] = ["dd_go", "https://duckduckgo.com/html/?ka=n&kh=1&kl=wt-wt&kp=-1&kt=n&kv=1&ky=-1&q=", "dd.png"];
 se["sx"] = ["searx", "https://searx.me/?q=", ""];
 se["gg"] = ["google", "https://www.google.com/search?hl=de&safe=off&q=", "gg.png"];
+se["wa"] = ["wolfram", "https://www.wolframalpha.com/input/?i=", ""];
 se["si"] = ["sp_img", "https://startpage.com/do/search?cat=pics&query=", "sp.png"];
 se["gi"] = ["gg_img", "https://www.google.com/images?hl=de&safe=off&q=", "gg.png"];
 se["mg"] = ["metager", "https://metager.de/meta/meta.ger3?eingabe=", ""];
