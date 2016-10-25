@@ -46,6 +46,7 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
 <meta charset="UTF-8">
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="referrer" content="no-referrer">
 <title>consearch</title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
 <?php
