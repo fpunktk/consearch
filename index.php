@@ -30,10 +30,10 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
 <Description>conveniently use different searchengines</Description>
 <Tags>consearch</Tags>
 <Contact>consearch @ f p u n k t k . de</Contact>
-<Url type="text/html" template="https://www.fpunktk.de/consearch/index.php';
+<Url type="text/html" template="https://fpunktk.de/consearch/index.php';
     if ( $dse ) { echo "?dse=$dse"; }
     echo '#{searchTerms}"></Url>
-<Image height="16" width="16" type="image/png">https://www.fpunktk.de/consearch/consearch.png</Image>
+<Image height="16" width="16" type="image/png">https://fpunktk.de/consearch/consearch.png</Image>
 </OpenSearchDescription>';
     
     exit;
