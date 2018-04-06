@@ -159,6 +159,7 @@ se["man"] = ["u_man", "http://manpages.ubuntu.com/cgi-bin/search.py?ie=UTF-8&tit
 se["dps"] = ["deb-pkg", "https://packages.debian.org/search?searchon=names&suite=all&section=all&keywords=", ""];
 se["ups"] = ["uu-pkg", "http://packages.ubuntu.com/search?searchon=names&suite=all&section=all&keywords=", "man-u.png"];
 se["fps"] = ["fed-pkg", "https://admin.fedoraproject.org/pkgdb/packages/?motif=*", ""];
+se["lps"] = ["pkgs", "https://pkgs.org/download/", ""];
 se["yt"] = ["youtube", "https://www.youtube.com/results?search_query=", "yt.png"];
 se["imdb"] = ["imdb", "http://www.imdb.com/find?s=all&q=", "imdb.png"];
 se["az"] = ["amazon", "https://www.amazon.de/s/?url=search-alias%3Daps&field-keywords=", "az.png"];
