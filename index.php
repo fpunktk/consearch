@@ -180,6 +180,7 @@ se["gsm"] = ["gsm", "http://www.gsmarena.com/results.php3?sQuickSearch=yes&sName
 se["ck"] = ["chfkch", "http://www.chefkoch.de/suche.php?wo=2&suche=", ""];
 se["ypi"] = ["ypi", "http://youpronounce.it/search.jsp?q=", ""];
 se["ks"] = ["ks", "https://kraut.space/start?do=search&id=", "ks.png"];
+se["obi"] = ["obi", "https://www.obi.de/search/", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
