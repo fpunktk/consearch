@@ -181,6 +181,7 @@ se["ck"] = ["chfkch", "http://www.chefkoch.de/suche.php?wo=2&suche=", ""];
 se["ypi"] = ["ypi", "http://youpronounce.it/search.jsp?q=", ""];
 se["ks"] = ["ks", "https://kraut.space/start?do=search&id=", "ks.png"];
 se["obi"] = ["obi", "https://www.obi.de/search/", ""];
+se["ikea"] = ["ikea", "https://www.ikea.com/de/de/search/?query=", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
