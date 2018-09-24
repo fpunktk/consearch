@@ -140,6 +140,8 @@ se["ii"] = ["startpg", "https://www.startpage.com/do/search?query=", "sp.png"];
 se["id"] = ["sp_de", "https://www.startpage.com/do/search?cmd=process_search&language=deutsch&with_language=lang_de&query=", "sp.png"];
 se["wp"] = ["wp_de", "https://de.wikipedia.org/wiki/Spezial:Search?search=", "wp.png"];
 se["wpe"] = ["wp_en", "https://en.wikipedia.org/wiki/Special:Search?search=", "wp.png"];
+se["qq"] = ["qwant_l", "https://lite.qwant.com/?t=web&s=0&b=0&q=", ""];
+se["qi"] = ["qw_img", "https://lite.qwant.com/?t=images&s=0&b=0&q=", ""];
 se["dd"] = ["dd_go", "https://duckduckgo.com/html/?ka=n&kh=1&kl=wt-wt&kp=-1&kt=n&kv=1&ky=-1&q=", "dd.png"];
 se["sx"] = ["searx", "https://searx.me/?q=", ""];
 se["gg"] = ["google", "https://www.google.com/search?hl=de&safe=off&q=", "gg.png"];
