@@ -277,7 +277,7 @@ Now add consearch to your browser. In firefox this is done via the searchbar. If
 ?>
 
 <p>
-<a href="https://fpunktk.de/gitweb/index.cgi?p=consearch.git;a=summary">about</a> | <a href="https://fpunktk.de/#kontakt">contact</a>
+<a href="https://fpunktk.de/gitweb/?p=consearch.git;a=summary">about</a> | <a href="https://fpunktk.de/#kontakt">contact</a>
 </p>
 
 </body>
