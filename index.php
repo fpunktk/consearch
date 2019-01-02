@@ -11,7 +11,11 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, see http://www.gnu.org/licenses/.
 */
 
-$dse = "";
+$consearch_name = "consearch";
+$consearch_base_url = "https://fpunktk.de/consearch/";
+$consearch_url = "$consearch_base_url" . "index.php";
+
+$dse = ""; // default search engine
 if ( isset($_GET['dse']) and preg_match('/^[0-9a-z]{1,5}$/', $_GET['dse']) === 1 ) { // TODO: prevent injection, check whether dse is a valid searchengine
     $dse = $_GET['dse'];
 }
@@ -24,16 +28,16 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
     header('Content-Type: text/xml');
     echo '<?xml version="1.0" encoding="UTF-8"?>
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
-<ShortName>consearch';
+<ShortName>' . "$consearch_name";
     if ( $dse ) { echo " ($dse)"; }
     echo '</ShortName>
 <Description>conveniently use different searchengines</Description>
 <Tags>consearch</Tags>
 <Contact>consearch @ f p u n k t k . de</Contact>
-<Url type="text/html" template="https://fpunktk.de/consearch/index.php';
+<Url type="text/html" template="' . "$consearch_url";
     if ( $dse ) { echo "?dse=$dse"; }
     echo '#{searchTerms}"></Url>
-<Image height="16" width="16" type="image/png">https://fpunktk.de/consearch/consearch.png</Image>
+<Image height="16" width="16" type="image/png">' . "$consearch_base_url" . 'consearch.png</Image>
 </OpenSearchDescription>';
     
     exit;
@@ -47,7 +51,7 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="referrer" content="no-referrer">
-<title>consearch</title>
+<title><?php echo "$consearch_name";?></title>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABlBMVEUAAACMuuz63rNKAAAAK0lEQVQI12P4/58BiM4cZ9gdDUVnboNE/n8Hoc6JDLvLGLrLGF4DyWlAcQBYKBgvsgbJOAAAAABJRU5ErkJggg==" type="image/png">
 <?php
 if ( $browserintegration ) {
@@ -55,7 +59,7 @@ if ( $browserintegration ) {
     if ( $dse ) {
         echo "&amp;dse=$dse";
     }
-    echo '" title="consearch';
+    echo '" title="' . "$consearch_name";
     if ( $dse ) {
         echo " ($dse)";
     }
@@ -234,7 +238,7 @@ if ( $dse ) {
 
 <body onload="parse_fragmentstring();">
 
-<h1><a href="./">fpunktk.de/consearch</a></h1>
+<h1><a href="./"><?php echo "$consearch_base_url";?></a></h1>
 
 <noscript>
 <p style="color: red; font-size: 200%; font-weight: bold;">
@@ -262,14 +266,14 @@ if ( $browserintegration ) {
 
 <?php
 if ( $browserintegration ) {
-    echo '</div>
+    echo "</div>
 
 <p>
-Now add consearch to your browser. In firefox this is done via the searchbar. If this does not work then consearch can be added via the following form, but this would send all queries to the server :-(
+Now add $consearch_name to your browser. In firefox this is done via the search bar or the ⋯-button in the address bar. If this does not work then $consearch_name can be added via the following form (right-click the input and select \"Add a Keyword for this Search...\"), but this would send all queries to the server and is not recommended.
 </p>
 
-<form method="GET" action="./">' . "\n";
-    if ( $dse ) { echo '<input type="hidden" name="dse" value="' . $dse . '">' . "\n"; }
+<form method=\"GET\" action=\"./\">\n";
+    if ( $dse ) { echo "<input type=\"hidden\" name=\"dse\" value=\"$dse\">\n"; }
     echo '<input type="text" name="consearchterm" value="">
 </form>
 ';
