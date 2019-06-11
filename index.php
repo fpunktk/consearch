@@ -188,6 +188,9 @@ se["ye"] = ["you-eng", "https://youglish.com/search/", ""];
 se["ks"] = ["ks", "https://kraut.space/start?do=search&id=", "ks.png"];
 se["obi"] = ["obi", "https://www.obi.de/search/", ""];
 se["ikea"] = ["ikea", "https://www.ikea.com/de/de/search/?query=", ""];
+se["it"] = ["i-tanke", "https://ich-tanke.de/suche/?q=", ""]
+se["ct"] = ["clv-tkn", "https://www.clever-tanken.de/tankstelle_liste?spritsorte=7&r=10&ort=", ""]
+se["tp"] = ["tankstp", "https://www.tankstellenpreise.de/suche.html?sorte=2&u=10&s=1&o=", ""]
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
