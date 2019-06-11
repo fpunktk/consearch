@@ -152,7 +152,7 @@ se["wa"] = ["wolfram", "https://www.wolframalpha.com/input/?i=", ""];
 se["si"] = ["sp_img", "https://startpage.com/do/search?cat=pics&query=", "sp.png"];
 se["gi"] = ["gg_img", "https://www.google.com/images?hl=de&safe=off&q=", "gg.png"];
 se["mg"] = ["metager", "https://metager.de/meta/meta.ger3?eingabe=", ""];
-//se["wb"] = ["wb", "http://www.woerterbuch.info/?query=", ""];
+se["wb"] = ["wb", "http://www.woerterbuch.info/?query=", ""];
 se["leo"] = ["leo", "https://dict.leo.org/german-english/", "leo.png"];
 se["dc"] = ["dict.cc", "https://www.dict.cc/?s=", ""];
 se["gt"] = ["gg_tl", "https://translate.google.de/?hl=de&tab=wT#en|de|", "gg.png"];
