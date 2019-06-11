@@ -154,6 +154,7 @@ se["gi"] = ["gg_img", "https://www.google.com/images?hl=de&safe=off&q=", "gg.png
 se["mg"] = ["metager", "https://metager.de/meta/meta.ger3?eingabe=", ""];
 se["wb"] = ["wb", "http://www.woerterbuch.info/?query=", ""];
 se["leo"] = ["leo", "https://dict.leo.org/german-english/", "leo.png"];
+se["lg"] = ["linguee", "https://www.linguee.com/search?source=auto&query=", ""]
 se["dc"] = ["dict.cc", "https://www.dict.cc/?s=", ""];
 se["gt"] = ["gg_tl", "https://translate.google.de/?hl=de&tab=wT#en|de|", "gg.png"];
 se["ud"] = ["ud", "http://www.urbandictionary.com/define.php?term=", "ud.png"];
