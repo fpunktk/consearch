@@ -166,6 +166,7 @@ se["dps"] = ["deb-pkg", "https://packages.debian.org/search?searchon=names&suite
 se["ups"] = ["uu-pkg", "http://packages.ubuntu.com/search?searchon=names&suite=all&section=all&keywords=", "man-u.png"];
 se["fps"] = ["fed-pkg", "https://apps.fedoraproject.org/packages/s/", ""];
 se["lps"] = ["lnxpkgs", "https://pkgs.org/download/", ""];
+se["fd"] = ["f-droid", "https://search.f-droid.org/?q=", ""];
 se["yt"] = ["youtube", "https://www.youtube.com/results?search_query=", "yt.png"];
 se["imdb"] = ["imdb", "http://www.imdb.com/find?s=all&q=", "imdb.png"];
 se["az"] = ["amazon", "https://www.amazon.de/s/?url=search-alias%3Daps&field-keywords=", "az.png"];
