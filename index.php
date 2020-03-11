@@ -192,6 +192,7 @@ se["ikea"] = ["ikea", "https://www.ikea.com/de/de/search/?query=", ""];
 se["it"] = ["i-tanke", "https://ich-tanke.de/suche/?q=", ""]
 se["ct"] = ["clv-tkn", "https://www.clever-tanken.de/tankstelle_liste?spritsorte=7&r=10&ort=", ""]
 se["tp"] = ["tankstp", "https://www.tankstellenpreise.de/suche.html?sorte=2&u=10&s=1&o=", ""]
+se["ost"] = ["ost", "https://www.opensubtitles.org/en/search2/sublanguageid-eng/moviename-", ""];
 
 function display_searchbuttons() {
     document.getElementById("searchbuttons").innerHTML = "";
