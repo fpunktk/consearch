@@ -38,8 +38,8 @@ if ( isset($_GET['get']) and $_GET['get'] === "opensearchdescription" ) {
     if ( $dse ) { echo "?dse=$dse"; }
     echo '#{searchTerms}"></Url>
 <Image height="16" width="16" type="image/png">' . "$consearch_base_url" . 'consearch.png</Image>
-</OpenSearchDescription>';
-    
+</OpenSearchDescription>
+';
     exit;
 }
 
@@ -247,9 +247,7 @@ if ( $dse ) {
 <h1><a href="./"><?php echo "$consearch_base_url";?></a></h1>
 
 <noscript>
-<p style="color: red; font-size: 200%; font-weight: bold;">
-please enable javascript
-</p>
+<p style="color: red; font-size: 200%; font-weight: bold;">please enable javascript</p>
 </noscript>
 
 <?php
@@ -259,16 +257,11 @@ if ( $browserintegration ) {
 }
 ?>
 
-<div>
-<label><input id="querystring" type="text"></label>
-</div>
+<div><label><input id="querystring" type="text"></label></div>
 
-<div id="searchbuttons">
-</div>
+<div id="searchbuttons"></div>
 
-<p>
-<a href="?include=browserintegration">add to browser</a>
-</p>
+<p><a href="?include=browserintegration">add to browser</a></p>
 
 <?php
 if ( $browserintegration ) {
@@ -286,9 +279,7 @@ Now add $consearch_name to your browser. In firefox this is done via the search 
 }
 ?>
 
-<p>
-<a href="https://fpunktk.de/gitweb/?p=consearch.git;a=summary">about</a> | <a href="https://fpunktk.de/#kontakt">contact</a>
-</p>
+<p><a href="https://fpunktk.de/gitweb/?p=consearch.git;a=summary">about</a> | <a href="https://fpunktk.de/#kontakt">contact</a></p>
 
 </body>
 </html>
