@@ -267,14 +267,22 @@ if ( $browserintegration ) {
 if ( $browserintegration ) {
     echo "</div>
 
-<p>
-Now add $consearch_name to your browser. In firefox this is done via the search bar or the ⋯-button in the address bar. If this does not work then $consearch_name can be added via the following form (right-click the input and select \"Add a Keyword for this Search...\"), but this would send all queries to the server and is not recommended.
-</p>
-
-<form method=\"GET\" action=\"./\">\n";
-    if ( $dse ) { echo "<input type=\"hidden\" name=\"dse\" value=\"$dse\">\n"; }
-    echo '<input type="text" name="consearchterm" value="">
-</form>
+<div style='text-align: left;'>
+<p>Add $consearch_name to your browser:</p>
+<ul style='margin: 0.5ex 2ex'>
+<li>In firefox desktop this is done via the search bar or the ⋯-button in the address bar.</li>
+<li>In firefox for android: Go to settings → search → add search engine → other, add a name (like $consearch_name) and the url '$consearch_url#%s'</li>
+<li>
+    If this does not work then $consearch_name can perhaps be added via the following form (right-click the input and select 'Add a Keyword for this Search...'), but this will send all queries to the server and is therefore not recommended.
+    <form method=\"GET\" action=\"./\">";
+    if ( $dse ) { echo "
+        <input type=\"hidden\" name=\"dse\" value=\"$dse\">"; }
+        echo '
+        <input type="text" name="consearchterm" value="">
+    </form>
+</li>
+</ul>
+</div>
 ';
 }
 ?>
